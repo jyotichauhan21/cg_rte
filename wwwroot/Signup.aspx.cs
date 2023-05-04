@@ -28,6 +28,8 @@ public partial class wwwroot_Signup : System.Web.UI.Page
 
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conDB"].ConnectionString);
                 SqlCommand cmd = new SqlCommand("usp_CheckSignUpDetails", con);
+                
+               
                 cmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPassword1.Text);
@@ -35,33 +37,31 @@ public partial class wwwroot_Signup : System.Web.UI.Page
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                //DataTable dt = new DataTable();
+                //sda.Fill(dt);
                 con.Open();
                 int i = 0;
                 i = cmd.ExecuteNonQuery();
                 con.Close();
 
-                if (dt.Rows.Count > 0)
-
+                if (i == 1)
                 {
                     Response.Write("<script>alert('SignUp Successfully!'); </script>");
                     Response.Redirect("HomePage.aspx");
-                    break;
                 }
                 else
                 {
-                    Response.Write("<script>alert('Signup failed!'); </script>");
+                    Response.Write("<script>alert('User already exist!'); </script>");
                     txtUserName.Focus();
-                    break;
 
                 }
                 con.Close();
            }
            catch (Exception ex)
            {
-               Response.Write("<script>alert('Exception occure singup failed error!'); </script>");
+               Response.Write("<script>alert('Exception ocucurs!'); </script>");
                Response.Write(ex.Message);
+
            }
 
         }

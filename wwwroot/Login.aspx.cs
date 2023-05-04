@@ -14,9 +14,9 @@ public partial class wwwroot_Login : System.Web.UI.Page
     {
 
     }
+
     protected void Button1_Click(object sender, EventArgs e)
     {
-
 
         if (IsFormValid())
         {
@@ -26,16 +26,17 @@ public partial class wwwroot_Login : System.Web.UI.Page
                 SqlCommand cmd = new SqlCommand("usp_CheckLoginDetails", con);
                 cmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                //DataTable dt = new DataTable();
+                //sda.Fill(dt);
                 con.Open();
                 int i = 0;
                 i = cmd.ExecuteNonQuery();
                 con.Close();
 
-                if (dt.Rows.Count>0)
+                if (i == 1)
                 {
                     //Session["user"] = txtUserName.Text;
                     Response.Write("<script>alert('Login Successfully!'); </script>");
@@ -45,9 +46,9 @@ public partial class wwwroot_Login : System.Web.UI.Page
                 }
                 else
                 {
-                    Response.Write("<script>alert('Login failed error.Something is wrong.Please try again'); </script>");
-                    txtUserName.Text = string.Empty;// After login clear the UserName
-                    txtPassword.Text = "";
+                    Response.Write("<script>alert('Invalid username and password!.Try again'); </script>");
+                    //txtUserName.Text = string.Empty;// After login clear the UserName
+                    //txtPassword.Text = "";
                     txtUserName.Focus();
 
                 }
