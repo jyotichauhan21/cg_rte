@@ -84,7 +84,7 @@
        <!--- <div class="imagecontainer">
             <img src="images/Security.png" alt="Avatar" class="avatar"/>
         </div>-->
-        <div class="container" style="width:700px; margin-left:350px; margin-top:50px;>
+        <div class="container" style="width:700px; margin-left:350px; margin-top:50px;">
             <label for="uname"><b>UserName</b></label>
             <asp:TextBox ID="txtUserName" runat="server" placeholder="Username"></asp:TextBox>
             <label for="psw"><b>Password</b></label>

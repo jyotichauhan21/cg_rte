@@ -24,29 +24,28 @@ public partial class wwwroot_Login : System.Web.UI.Page
 
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conDB"].ConnectionString);
                 SqlCommand cmd = new SqlCommand("usp_CheckLoginDetails", con);
+
                 cmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
 
                 cmd.CommandType = CommandType.StoredProcedure;
+                //SqlDataAdapter used as a bridge between a DataSet and SQL Server for retrieving and saving data.
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                //DataTable dt = new DataTable();
-                //sda.Fill(dt);
+                DataTable dt = new DataTable(); //DataTable represents a single table in the database. It has rows and columns
+                sda.Fill(dt);
                 con.Open();
                 int i = 0;
                 i = cmd.ExecuteNonQuery();
                 con.Close();
 
-                if (i == 1)
+                if (dt.Rows.Count > 0)
                 {
-                    //Session["user"] = txtUserName.Text;
                     Response.Write("<script>alert('Login Successfully!'); </script>");
-                    //txtUserName.Text = string.Empty;// After login clear the UserName
-                    //txtPassword.Text = "";
                     Response.Redirect("HomePage.aspx");
                 }
                 else
                 {
-                    Response.Write("<script>alert('Invalid username and password!.Try again'); </script>");
+                    Response.Write("<script>alert('Login failed.Try again'); </script>");
                     //txtUserName.Text = string.Empty;// After login clear the UserName
                     //txtPassword.Text = "";
                     txtUserName.Focus();
@@ -57,7 +56,7 @@ public partial class wwwroot_Login : System.Web.UI.Page
             catch(Exception ex){
                 Response.Write("<script>alert('Exception occure login failed error!'); </script>");
                 Response.Write(ex.Message);
-                Response.Redirect("Index.aspx");
+                //Response.Redirect("Index.aspx");
 
 
             }

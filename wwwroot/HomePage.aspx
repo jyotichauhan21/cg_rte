@@ -6,6 +6,7 @@
 <head runat="server">
     <title>RTE Portal (शिक्षा का अधिकार)</title>
     <link href="CSS/HomePage.css" rel="stylesheet" />
+    <link href="CSS/Header.css" rel="stylesheet" />
     <!---<style>
         div.scrollmenu {
             background-color:#333;
@@ -53,15 +54,15 @@
            <a href="#">सार्वजनिक जानकारी</a>
            <a href="#">मैपिंग रिपोर्ट</a>
            <a href="#">यूजर मैनुअल</a>
-           <!---<a href="Logout.aspx">Logout</a>--->
+           <a href="Login.aspx">लॉग आउट</a>
 
        </div>
 
 
-       <div style="float:right; background-color:green" >
+       <%--<div style="float:right; background-color:green" >
             <asp:Button ID="Button1" runat="server" Text="Logout" Font-Size="Larger" OnClick="Button1_Click" />
         
-       </div>
+       </div>--%>
 
          <!-- Footer Start -->
         <footer id="rs-footer" class="bg3 rs-footer rs-footer-style8 pt-50 ">
@@ -121,6 +122,7 @@
                 Designed, developed & hosted by National Informatics Center(NIC), Chhattsgarh State Centre, Raipur and Contents are owned by School Education Department, Govt. of Chhattisgarh.
                 Please contact the Web Team with your queries, comments, and suggestions about this website on <a href="http://eduportal.cg.nic.in/rte" target="_blank">eduportal.cg.nic.in/rte</a>.
                         </p>
+
                     </div>
                 </div>
             </div>
@@ -133,5 +135,6 @@
     
 
     </form>
+     
 </body>
 </html>

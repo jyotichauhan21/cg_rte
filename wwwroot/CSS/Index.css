@@ -15,20 +15,20 @@
                     background-color: #777;
                 }
         #Button3 {
-        background-color:#4CAF50;
+        background-color:lightblue;
         color:white;
         padding:14px 20px;
-        margin:8px 0;
+        margin-left:80px 0;
         border:none;
         cursor:pointer;
         width:100%;
         }
 
         #Button4 {
-        background-color:#4CAF50;
+        background-color:lightblue;
         color:white;
         padding:14px 20px;
-        margin:8px 0;
+        margin-right:80px 0;
         border:none;
         cursor:pointer;
         width:100%;
@@ -39,5 +39,6 @@
     }
     .container {
      padding:10px;
+
 }
     </style>

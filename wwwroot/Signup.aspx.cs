@@ -15,9 +15,7 @@ public partial class wwwroot_Signup : System.Web.UI.Page
     {
         
     }
-
-
-
+    
     protected void Button1_Click(object sender, EventArgs e)
     {
         
@@ -36,8 +34,9 @@ public partial class wwwroot_Signup : System.Web.UI.Page
                 cmd.Parameters.AddWithValue("@ConfirmPassword", txtPassword2.Text);
 
                 cmd.CommandType = CommandType.StoredProcedure;
+                //SqlDataAdapter used as a bridge between a DataSet and SQL Server for retrieving and saving data.
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                //DataTable dt = new DataTable();
+                //DataTable dt = new DataTable(); //DataTable represents a single table in the database. It has rows and columns
                 //sda.Fill(dt);
                 con.Open();
                 int i = 0;
@@ -47,7 +46,7 @@ public partial class wwwroot_Signup : System.Web.UI.Page
                 if (i == 1)
                 {
                     Response.Write("<script>alert('SignUp Successfully!'); </script>");
-                    Response.Redirect("HomePage.aspx");
+                    //Response.Redirect("HomePage.aspx");
                 }
                 else
                 {

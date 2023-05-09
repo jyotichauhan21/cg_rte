@@ -99,7 +99,7 @@
      <div style="width:700px; margin-left:350px; margin-top:50px;">
             <h2 style="text-align:center; background-color:lightgreen; padding:10px;">SignUp Form</h2>
         </div>
-        <div class="container" style="width:700px; margin-left:350px; margin-top:50px;>
+        <div class="container" style="width:700px; margin-left:350px; margin-top:50px;">
             <label for="uname"><b>UserName</b></label>
             <asp:TextBox ID="txtUserName" runat="server" placeholder="Username"></asp:TextBox>
             <label for="email"><b>Email</b></label>
