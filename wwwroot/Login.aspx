@@ -98,30 +98,6 @@
 
         </div>
         <br />
-
-       <!---<footer>
-            <div class="wrapper">
-                <div id="footer-info">
-                <h4 class="copyrighthead" style="color: #ffff !important">Disclaimer</h4>
-
-                    <p>Copyright &copy; &nbsp;2020&nbsp;-&nbsp;21&nbsp; CG School Education Department | Government of Chhattisgarh RTE. All Rights Reserved.Powerd by: NIC.
-                All efforts have been made to make the information as accurate as possible. Department of School Education, Govt. of Chhattisgarh or NIC will not be responsible for any damage caused by inaccuracy in the information available on this website. 
-                Designed, developed & hosted by National Informatics Center(NIC), Chhattsgarh State Centre, Raipur and Contents are owned by School Education Department, Govt. of Chhattisgarh.
-                Please contact the Web Team with your queries, comments, and suggestions about this website on <a href="http://eduportal.cg.nic.in/rte" target="_blank">eduportal.cg.nic.in/rte</a>.
-
-               </p>
-                </div>
-                <div id="footer-link">
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Meet the Team</a></li>
-                        <li><a href="#">What we do?</a></li>
-                        <li><a href="#">Careers</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </footer>--->
         <!-- Footer Start -->
         <footer id="rs-footer" class="bg3 rs-footer rs-footer-style8 pt-50 ">
             <div class="container">

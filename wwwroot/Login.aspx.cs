@@ -24,21 +24,15 @@ public partial class wwwroot_Login : System.Web.UI.Page
 
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conDB"].ConnectionString);
                 SqlCommand cmd = new SqlCommand("usp_CheckLoginDetails", con);
+                cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
-
-                cmd.CommandType = CommandType.StoredProcedure;
-                //SqlDataAdapter used as a bridge between a DataSet and SQL Server for retrieving and saving data.
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable(); //DataTable represents a single table in the database. It has rows and columns
-                sda.Fill(dt);
                 con.Open();
-                int i = 0;
-                i = cmd.ExecuteNonQuery();
-                con.Close();
-
-                if (dt.Rows.Count > 0)
+                SqlDataReader read = cmd.ExecuteReader();
+                read.Read();
+                //if there are ROWS returned
+                if (read.HasRows)
                 {
                     Response.Write("<script>alert('Login Successfully!'); </script>");
                     Response.Redirect("HomePage.aspx");
