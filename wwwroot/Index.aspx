@@ -8,6 +8,13 @@
     <link href="CSS/Header.css" rel="stylesheet" />
     <link href="CSS/Index.css" rel="stylesheet" />
     <link href="CSS/HomePage.css" rel="stylesheet" />
+     <style>
+        body {
+            background-image: url(images/backroungimage.png);
+            background-size:cover;
+            background-attachment:fixed;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,20 +51,7 @@
         <!--- This is end header section--->
 
         <hr />
-                <h1>Welcome to the Index page..</h1>
-        <p>
-            RTE 12 (1)(c) योजना भारतीय संसद द्वारा 4 अगस्त 2009 को पारित किया गया था तथा 1 अप्रैल 2010 से प्रभावी हुआ। छत्तीसगढ़ मे RTE 12 (1)(c) योजना का लाभ सत्र 2010-11 से दिया जा रहा है। पूर्व मे अधिनियम का लाभ कक्षा – आठवीं तक ही दिया जाता था, परन्तु अब इसमे (छ. ग. राज्य स्तर पर) संसोधन कर सत्र 2019 मे इसकी मान्यता बढ़ाकर क्लास – बारहवीं तक कर दी गयी है। आरटीई 12(1)(सी) के अंतर्गत सभी गैर – अनुदान प्राप्त और गैर – अल्पसंख्यक प्राइवेट स्कूलों के प्रारंभिक कक्षाओं में 25% सीट दुर्बल और असुविधाग्रस्त परिवार के बच्चों के लिए आरक्षित होता है। 
-            इस अधिनियम के तहत 3 से 6½ वर्ष तक के बच्चे किसी भी प्राइवेट स्कूल के प्रारंभिक कक्षा मे प्रवेश ले सकते है। 
-            इस योजना से प्रवेशित छात्र कक्षा 12वी तक नि:शुल्क चयनित स्कूल मे अध्ययन कर सकते है। अब तक छत्तीसगढ़ मे लगभग 2.9 लाख छात्र इस योजना का लाभ ले रहे है। 
-            क्योकि इस योजना का लाभ जरूरतमंद और पात्र छात्रों को नर्सरी से क्लास - बारहवीं तक नि:शुल्क शिक्षा दिया जाता है इसका मुख्य उदेश्य समाज मे सभी वर्ग के लोगो के मध्य सामाजिक समावेशन अर्थात सामाजिक समानता लाना, और सभी समूहों को मूल्यवान और महत्वपूर्ण महसूस करना है,
-             ताकि विभिन्न प्रकार से किए जाने वाले भेदभव को हटाया जा सके।
-        </p>
-        <p>
-            Who are eligible for RTE in Karnataka?
-            RTE Karnataka Admission:- Now, Economically and Socially Weak students can go to school under the Right to Education Act.
-             Every student in the country has a right to get an education. The Right to Education Act will provide free and compulsory education to children aged 6 to 14 years.
-
-        </p>     
+               
        
 
 

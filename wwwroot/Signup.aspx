@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>SignUp</title>
+    
      <link href="CSS/Header.css" rel="stylesheet" />
     <link href="CSS/footer.css" rel="stylesheet" />
     <link href="CSS/SignUpCSS.css" rel="stylesheet" />
