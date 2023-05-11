@@ -1,44 +1,85 @@
-﻿<style>
-        div.scrollmenu {
+﻿
+    nav {
             background-color:#333;
             overflow:auto;
             white-space:nowrap;
+    }
+
+     nav  ul li {
+            display:inline-block;
+            float:left;
+            z-index:1;
         }
-            div.scrollmenu a {
-                display:inline-block;
-                color:white;
-                text-align:center;
-                padding:14px;
-                text-decoration:none;
-            }
-                div.scrollmenu a:hover {
-                    background-color: #777;
+   nav  a {
+        display:inline-block;
+        color:white;
+        text-align:center;
+        padding:14px;
+        text-decoration:none;
+    }
+    nav a:hover {
+                    background-color:#777;
                 }
-        #Button3 {
-        background-color:lightblue;
-        color:white;
-        padding:14px 20px;
-        margin-left:80px 0;
-        border:none;
-        cursor:pointer;
-        width:100%;
+nav ul ul {
+    display:none;
+    position:absolute;
+    top:48px;
+}
+nav ul li:hover > ul {
+    display:inherit;
+}
+
+nav ul ul li {
+    float:none;
+    display:list-item;
+    position:relative;
+    background-color:#333;
+    width:150px;
+}
+        nav ul ul ul li {
+            position:relative;
+            left:150px;
+            top:-48px;
         }
 
-        #Button4 {
-        background-color:lightblue;
+.toggle, [id^=drop] {
+    display:none;
+}
+@media all and (max-width:600px) {
+    .menu {
+        display:none;
+    }
+    .toggle {
+        display:block;
+        background-color:#333;
         color:white;
-        padding:14px 20px;
-        margin-right:80px 0;
-        border:none;
-        cursor:pointer;
+        text-decoration:none;
+        padding:10px;
+    }
+        .toggle:hover {
+            background-color:white;
+            color:dimgray;
+        }
+        [id^=drop]:checked+ul {
+            display:block;
+}
+    nav ul li {
+        display:block;
         width:100%;
     }
-
-    button:hover {
-     opacity:0.8;
+    nav ul ul {
+        float:none;
+        position:static;
     }
-    .container {
-     padding:10px;
+
+        nav ul ul ul {
+            float:none;
+            position:absolute;
+        }
 
 }
-    </style>
+
+
+
+
+

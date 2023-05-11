@@ -18,7 +18,8 @@ small {
     margin:0 auto; padding:0 10px; width:490px;
 }
 header {
-    height:120px;     background-color:rgba(0,0,0,0.6);
+    height: 120px;
+    background-color:#2d3030d1;
 }
 
     header h1 {
@@ -41,9 +42,3 @@ header {
                 margin-right:20px;
             }
 
-.rs-animation-reverse {rs-header-top headertop headerbackground
-  -webkit-animation-direction: reverse;
-  animation-direction: reverse;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-}

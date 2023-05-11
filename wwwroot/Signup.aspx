@@ -5,10 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>SignUp</title>
-    
-     <link href="CSS/Header.css" rel="stylesheet" />
-    <link href="CSS/footer.css" rel="stylesheet" />
-    <link href="CSS/SignUpCSS.css" rel="stylesheet" />
+        <link href="CSS/SignUpCSS.css" rel="stylesheet" />
     <meta charset="UTF-8"/>
 
     <script language="javascript" type="text/ecmascript">
@@ -75,7 +72,7 @@
     <form id="form1" runat="server">
 
         <!--- This is header section--->
-        <header>
+        <header style="background-color: #2d3030d1";>
             <div class="rs-header-top headertop headerbackground">
                     <div class="container containertop">
                         <div class="row">
@@ -84,7 +81,8 @@
                                     
                                        <img src="images/cglogo.png" alt="logo" width="100px" height="100px" />
                                 </div>
-                                <div>
+                                  <div style="color:white">
+
                                     <p class="h1Heading">स्कूल शिक्षा विभाग</p>
                                     <p class="h2Heading">शिक्षा का अधिकार (RTE) पोर्टल</p>
                                     <p class="h2Heading">छत्तीसगढ़ शासन</p>
@@ -122,38 +120,19 @@
             <div class="container">
                 <!-- Footer Address -->
                 <div>
-                    <div class="row footer-contact-desc">
-                        <div class="col-md-4">
-                            <div class="contact-inner">
-                                <i class="fa fa-map-marker"></i>
-                                <h4 class="contact-title">पता</h4>
-                                <p class="contact-desc">
-                                      <asp:Label ID="lblAddress" runat="server"></asp:Label>
-                                     
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="contact-inner">
-                                <i class="fa fa-phone"></i>
-                                <h4 class="contact-title">हेल्पलाइन नंबर</h4>
-                                <p class="contact-desc">
-                                    <asp:Label ID="lblContact_footer" runat="server"></asp:Label>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="contact-inner">
-                                <i class="fa fa-envelope"></i>
-                                <h4 class="contact-title">ईमेल आई.डी.</h4>
-                                <p class="contact-desc">
-                                   <asp:Label ID="lblEmail_footer" runat="server"></asp:Label>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <h4 >पता</h4>
+                                
+                 </div>
+                 <div>
+                     <h4>हेल्पलाइन नंबर</h4>
+
+                 </div>
+                <div>
+                    <h4>ईमेल आई.डी.</h4>
+
                 </div>
             </div>
+
 
             <!-- Footer Top -->
             <div class="footer-top">
@@ -179,12 +158,7 @@
                 </div>
             </div>
         </footer>
-        
-        <!-- start scrollUp  -->
-        <div id="scrollUp">
-            <i class="fa fa-angle-up"></i>
-        </div>
-    
+      
     </form>
 </body>
 </html>

@@ -2,13 +2,14 @@
     padding:60px 0;
     background-color:#f8fafa;
 }
+
     #footer-info {
         width:380px;
         float:left;
         margin-top:10px;
     }
 
-    #footer-link {
+    /*#footer-link {
         width:520px;
         float:right;
     }
@@ -19,5 +20,8 @@
         }
             #footer-link ul li {
                 margin:10px 0;
-            }
+            }*/
+
+
+
 
