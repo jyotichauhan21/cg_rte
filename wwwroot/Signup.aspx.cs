@@ -32,6 +32,7 @@ public partial class wwwroot_Signup : System.Web.UI.Page
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPassword1.Text);
                 cmd.Parameters.AddWithValue("@ConfirmPassword", txtPassword2.Text);
+                cmd.Parameters.AddWithValue("@RoleId", DropDownList1.SelectedValue);
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 //SqlDataAdapter used as a bridge between a DataSet and SQL Server for retrieving and saving data.
@@ -111,6 +112,12 @@ public partial class wwwroot_Signup : System.Web.UI.Page
 
             return false;
         }
+        else if (Pass1 != Pass2)
+        {
+            Response.Write("<script>alert('Both passwords are not same.Please enter same password!'); </script>");
+
+            return false;
+        }
         else if (User.Length == 0)
         {
             Response.Write("<script>alert('Username can not be empty!'); </script>");
@@ -132,6 +139,7 @@ public partial class wwwroot_Signup : System.Web.UI.Page
         return true;
     }
 
+
    
-    } 
+}
 

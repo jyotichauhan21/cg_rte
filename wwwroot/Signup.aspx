@@ -5,7 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>SignUp</title>
-        <link href="CSS/SignUpCSS.css" rel="stylesheet" />
+    <style>
+         #footer{
+    position: absolute;
+    bottom: 0px;
+    height: 3px;
+    background-color: #666;
+    color: #eee;
+}
+    </style>
+    <link href="CSS/SignUpCSS.css" rel="stylesheet" />
     <meta charset="UTF-8"/>
 
     <script language="javascript" type="text/ecmascript">
@@ -108,16 +117,30 @@
             <asp:TextBox ID="txtPassword1" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
             <label for="uid"><b>Confirm Password</b></label>
             <asp:TextBox ID="txtPassword2" runat="server" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
+            <asp:Label ID="Label1" runat="server" Text="Role"></asp:Label>
+            <div>
+                <asp:DropDownList ID="DropDownList1" runat="server" Width="700px" Height="40px">
+                    <asp:ListItem Text="चुने" Value="0"></asp:ListItem>
+                    <asp:ListItem>डियो</asp:ListItem>
+                    <asp:ListItem>डीपीआई</asp:ListItem>
+                    <asp:ListItem>नोडल</asp:ListItem>
 
+                </asp:DropDownList>
+            </div>
+
+            
             <asp:Button ID="Button1" runat="server" Text="साइन अप करें" CssClass="buttoncustom button button-default-size" type="submit" Font-Size="Larger" OnClick="Button1_Click" OnClientClick=" return ValidateForm();" />
 
         </div>
        
         <br />
 
-         <!-- Footer Start -->
-        <footer id="rs-footer" class="bg3 rs-footer rs-footer-style8 pt-50 ">
+       <!-- Footer Start -->
+
+        <footer class="page-footer font-small unique-color-dark text-center" id="footer">
             <div class="container">
+                <!-- Footer Address -->
+                <div class="container">
                 <!-- Footer Address -->
                 <div>
                     <h4 >पता</h4>
@@ -132,33 +155,54 @@
 
                 </div>
             </div>
-
-
-            <!-- Footer Top -->
-            <div class="footer-top">
+          </div>
+            <div style="background-color:#2d3030d1">
                 <div class="container">
-                    <div class="row">
-                    </div>
-                </div>
-            </div>
+                    <div class="row py-4 d-flex align-items-center">
+                        <!---Grid column--->
+                        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                            <h6 class="mb-0" style="color:white;">Get connected with us on social media network!
 
-            <!-- Footer Bottom -->
-            <!-- Footer Bottom -->
-            <div class="footer-bottom" style="background-color: #2d3030d1;">
-                <div class="container">
-                    <div class="copyright">
-                        <h4 class="copyrighthead" style="color: #ffff !important">Disclaimer</h4>
-                        <p class="copyrightcontent">
-                            Copyright &copy; &nbsp;2020&nbsp;-&nbsp;21&nbsp; CG School Education Department | Government of Chhattisgarh RTE. All Rights Reserved.Powerd by: NIC.
+                            </h6>
+                        </div>
+                       <!---Grid column--->
+                        <div class="flex-center">
+                            <%-- Facebook --%>
+                            <a class="fb-ic">
+                                <i class="fab fa-facebook-f fa-lg white-text mr-4"></i>
+                            </a>
+                            <%-- Twitter --%>
+                            <a class="tw-ic">
+                                <i class="fab fa-twitter fa-lg white-text mr-4"></i>
+                            </a>
+                            <%-- Google --%>
+                            <a class="gplus-ic">
+                                <i class="fab fa-google-plus-g fa-lg white-text mr-4"></i>
+                            </a>
+                            <%-- Linkedin --%>
+                            <a class="li-ic">
+                                <i class="fab fa-linkedin-in fa-lg white-text mr-4"></i>
+                            </a>
+                            <%-- Instagram --%>
+                            <a class="ins-ic">
+                                <i class="fab fa-instagram fa-lg white-text mr-4"></i>
+                            </a>
+                        </div>
+                        <%-- copyright --%>
+            <div class="footer-copyright text-center py-3">
+                 Copyright &copy; &nbsp;2020&nbsp;-&nbsp;21&nbsp; CG School Education Department | Government of Chhattisgarh RTE. All Rights Reserved.Powerd by: NIC.
                 All efforts have been made to make the information as accurate as possible. Department of School Education, Govt. of Chhattisgarh or NIC will not be responsible for any damage caused by inaccuracy in the information available on this website. 
                 Designed, developed & hosted by National Informatics Center(NIC), Chhattsgarh State Centre, Raipur and Contents are owned by School Education Department, Govt. of Chhattisgarh.
                 Please contact the Web Team with your queries, comments, and suggestions about this website on <a href="http://eduportal.cg.nic.in/rte" target="_blank">eduportal.cg.nic.in/rte</a>.
-                        </p>
+            </div>
+            <%-- end copyright --%>
                     </div>
                 </div>
             </div>
+
         </footer>
-      
+       <!-- Footer ends -->
+
     </form>
 </body>
 </html>

@@ -96,4 +96,8 @@ public partial class wwwroot_Login : System.Web.UI.Page
         return true;
 
     }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Index.aspx");
+    }
 }

@@ -31,7 +31,7 @@
                             <div class="col-lg-6 col-md-12 col-sm-12 col-12" style="display: -webkit-inline-box;">
                                 <div class=" text-center imagelogo headertop">
                                     
-                                       <img src="images/cglogo.png" alt="logo" width="100px" height="100px" />
+                                       <img src="../images/cglogo.png" alt="logo" width="100px" height="100px" />
                                 </div>
                                 <div>
                                     <p class="h1Heading">स्कूल शिक्षा विभाग</p>
