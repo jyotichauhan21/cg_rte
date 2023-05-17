@@ -9,12 +9,14 @@ using System.Configuration;
 using System.Data;
 using System.Web.Handlers;
 using System.Text.RegularExpressions;
+using System.Net.Mail;
 
 public partial class wwwroot_Signup : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        if (IsPostBack) return;
+        BindDataInotDropDownList();
     }
     
     protected void Button1_Click(object sender, EventArgs e)
@@ -33,30 +35,7 @@ public partial class wwwroot_Signup : System.Web.UI.Page
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPassword1.Text);
                 cmd.Parameters.AddWithValue("@ConfirmPassword", txtPassword2.Text);
-                //cmd.Parameters.AddWithValue("@RoleId", DropDownList1.SelectedValue);
-                //if (RadioButton1.Checked)
-                //{
-                //    /////
-                //}
-                //else if (RadioButton2.Checked)
-                //{
-
-                //    /////
-                //}
-                //else if (RadioButton3.Checked)
-                //{
-                //    //////
-                //}
-                //else if (RadioButton4.Checked)
-                //{
-                //    ////
-                //}
-                //else
-                //{
-                //    Response.Write("<script>alert('Please select a radio option!'); </script>");
-                //}
-
-               //cmd.Parameters.AddWithValue("@RoleId", RoleId);
+                cmd.Parameters.AddWithValue("@RoleId", DropDownList1.SelectedValue);
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 //SqlDataAdapter used as a bridge between a DataSet and SQL Server for retrieving and saving data.
@@ -95,6 +74,27 @@ public partial class wwwroot_Signup : System.Web.UI.Page
         }
     }
 
+    private void BindDataInotDropDownList() {
+
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conDB"].ConnectionString);
+        SqlCommand cmd = new SqlCommand("usp_UserRoles", con);
+        cmd.CommandType = CommandType.StoredProcedure;
+        //SqlDataAdapter used as a bridge between a DataSet and SQL Server for retrieving and saving data.
+        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+        DataTable dt = new DataTable(); //DataTable represents a single table in the database. It has rows and columns
+        sda.Fill(dt);
+        con.Open();
+        int i = 0;
+        i = cmd.ExecuteNonQuery();
+        con.Close();
+
+        // Bind data into dropdown list
+        DropDownList1.DataSource = dt;
+        DropDownList1.DataTextField = "Role";
+        DropDownList1.DataValueField = "RoleId";
+        DropDownList1.DataBind();
+        DropDownList1.Items.Insert(0, "-------Select-------");
+    }
 
 
     private bool IsFormValid()
@@ -104,9 +104,6 @@ public partial class wwwroot_Signup : System.Web.UI.Page
         string Pass1 = txtPassword1.Text;
         string Pass2 = txtPassword2.Text;
         string Email = txtEmail.Text;
-        //bool isValid = IsEMailAddrValid(Email);
-        string pattern = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
-
 
         if (User == "" && Pass1 == "" && Pass2 == "" && Email == "")
         {
