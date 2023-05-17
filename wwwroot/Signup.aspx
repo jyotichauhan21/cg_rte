@@ -112,20 +112,42 @@
             <asp:TextBox ID="txtUserName" runat="server" placeholder="Username"></asp:TextBox>
             <label for="email"><b>Email</b></label>
             <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" ></asp:TextBox>
+            <%--<asp:RegularExpressionValidator
+        id="regEmail"
+        ControlToValidate="EmailAddress"
+        Text="Enter valid email id"
+        ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+        Runat="server" />    --%>
 
             <label for="uid"><b>Password</b></label>
             <asp:TextBox ID="txtPassword1" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
             <label for="uid"><b>Confirm Password</b></label>
             <asp:TextBox ID="txtPassword2" runat="server" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
-            <asp:Label ID="Label1" runat="server" Text="Role"></asp:Label>
+<%--            <asp:Label ID="Label1" runat="server" Text="Role"></asp:Label>--%>
+            <label for="uid"><b>Role</b></label>
             <div>
-                <asp:DropDownList ID="DropDownList1" runat="server" Width="700px" Height="40px">
+                <%--<asp:DropDownList ID="DropDownList1" runat="server" Width="700px" Height="40px">
                     <asp:ListItem Text="चुने" Value="0"></asp:ListItem>
-                    <asp:ListItem>डियो</asp:ListItem>
-                    <asp:ListItem>डीपीआई</asp:ListItem>
-                    <asp:ListItem>नोडल</asp:ListItem>
+                    <asp:ListItem Value="2">डियो</asp:ListItem>
+                    <asp:ListItem Value="1">डीपीआई</asp:ListItem>
+                    <asp:ListItem Value="3">नोडल</asp:ListItem>
+                    <asp:ListItem Value="4">स्कूल</asp:ListItem>
 
-                </asp:DropDownList>
+
+                </asp:DropDownList>--%>
+                 <%--<asp:RadioButton ID="RadioButton2" runat="server" Text="डियो"  Value="2"/>  
+                 <asp:RadioButton ID="RadioButton1" runat="server" Text="डीपीआई"  Value="1"/> 
+                 <asp:RadioButton ID="RadioButton3" runat="server" Text="नोडल" Value="3"/> 
+                 <asp:RadioButton ID="RadioButton4" runat="server" Text="स्कूल" Value="4"/> --%>
+
+                <asp:RadioButtonList ID="rblMeasurementSystem" runat="server">
+                    <asp:ListItem Text="डियो" Value="डियो" />
+                    <asp:ListItem Text="डीपीआई" Value="डीपीआई" />
+                    <asp:ListItem Text="नोडल" Value="नोडल" />
+                    <asp:ListItem Text="स्कूल" Value="स्कूल" />
+                </asp:RadioButtonList>
+
+ 
             </div>
 
             

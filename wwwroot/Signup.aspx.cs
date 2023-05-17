@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 using System.Web.Handlers;
+using System.Text.RegularExpressions;
 
 public partial class wwwroot_Signup : System.Web.UI.Page
 {
@@ -32,7 +33,30 @@ public partial class wwwroot_Signup : System.Web.UI.Page
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@Password", txtPassword1.Text);
                 cmd.Parameters.AddWithValue("@ConfirmPassword", txtPassword2.Text);
-                cmd.Parameters.AddWithValue("@RoleId", DropDownList1.SelectedValue);
+                //cmd.Parameters.AddWithValue("@RoleId", DropDownList1.SelectedValue);
+                //if (RadioButton1.Checked)
+                //{
+                //    /////
+                //}
+                //else if (RadioButton2.Checked)
+                //{
+
+                //    /////
+                //}
+                //else if (RadioButton3.Checked)
+                //{
+                //    //////
+                //}
+                //else if (RadioButton4.Checked)
+                //{
+                //    ////
+                //}
+                //else
+                //{
+                //    Response.Write("<script>alert('Please select a radio option!'); </script>");
+                //}
+
+               //cmd.Parameters.AddWithValue("@RoleId", RoleId);
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 //SqlDataAdapter used as a bridge between a DataSet and SQL Server for retrieving and saving data.
@@ -47,7 +71,7 @@ public partial class wwwroot_Signup : System.Web.UI.Page
                 if (i == 1)
                 {
                     Response.Write("<script>alert('SignUp Successfully!'); </script>");
-                    //Response.Redirect("HomePage.aspx");
+                    Response.Redirect("Login.aspx");
                 }
                 else
                 {
@@ -72,6 +96,7 @@ public partial class wwwroot_Signup : System.Web.UI.Page
     }
 
 
+
     private bool IsFormValid()
     {
 
@@ -80,6 +105,7 @@ public partial class wwwroot_Signup : System.Web.UI.Page
         string Pass2 = txtPassword2.Text;
         string Email = txtEmail.Text;
         //bool isValid = IsEMailAddrValid(Email);
+        string pattern = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
 
 
         if (User == "" && Pass1 == "" && Pass2 == "" && Email == "")

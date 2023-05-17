@@ -1,18 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="wwwroot_Index" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="wwwroot_DeoMaster" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <title>RTE Portal (शिक्षा का अधिकार)</title>
-    <link href="CSS/Index.css" rel="stylesheet" />
-     <style>
-        body {
-            background-image: url(images/backroungimage.png);
-            background-size:cover;
-            background-attachment:fixed;
-        }
-          #footer{
+<head runat="server">
+    <title></title>
+    <link href="../CSS/LoginCSS.css" rel="stylesheet" />
+    <style>
+         #footer{
     position: absolute;
     bottom: 0px;
     height: 3px;
@@ -20,11 +15,13 @@
     color: #eee;
 }
     </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
-
 <body>
     <form id="form1" runat="server">
-     <!--- This is header section--->
+    <div>
+         <!--- This is header section--->
         <header style="background-color: #2d3030d1";>
             <div class="rs-header-top headertop headerbackground">
                     <div class="container containertop">
@@ -40,88 +37,37 @@
                                     <p class="h2Heading">छत्तीसगढ़ शासन</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                
-                </div>
+            </div>
+        </div>
+         </div>
         </header>
-
-        <nav>
-            <label class="toggle" for="drop">Menu</label>
-           <input type="checkbox" id="drop"/>
-          <ul class="menu">
-            <li><a href="index.aspx">होम</a></li>
-             <li><a href="Contact.aspx">प्संपर्क करें</a></li>
-             <li><a href="OurServices.aspx">हमारी सेवाएँ</a></li>
-             <li><a href="Signup.aspx">साइन अप करें</a></li>
-              <li><a href="#">लॉगिन करें</a>
-                <ul>
-                    <li><a href="Login.aspx">लॉगिन सामान्य</a></li>
-                    <li><a href="Logindeo.aspx">लॉगिन डियो</a></li>
-                    <li><a href="Logindpi.aspx">लॉगिन डीपीआई</a></li>
-                    <li><a href="Loginnodal.aspx">लॉगिन नोडल</a></li>
-
-                </ul>
-            </li>
-
-
-        </ul>
-       </nav>
-
         <!--- This is end header section--->
-
-        <br />
-
-        <!-- Box menu Start -->
-    
-                            <div class="services-icon">
-                                <i class="fa fa-building-o rs-animation-scale-up"></i>
-                            </div>
-                            <div class="services-desc">
-                                <h4 class="services-title">नए स्कूल रजिस्ट्रेशन</h4>
-
-                            </div>
-                
-                            <div class="services-icon">
-                                <i class="fa fa-graduation-cap rs-animation-scale-up"></i>
-                            </div>
-                            <div class="services-desc">
-                                <h4 class="services-title">छात्र पंजीयन (आवेदन)/ संसोधन / प्रिंट</h4>
-                            </div>
-                       
-                
-                            <div class="services-icon">
-                                <i class="fa fa-info-circle rs-animation-scale-up"></i>
-                            </div>
-                            <div class="services-desc">
-                                <h4 class="services-title">स्कूल एवं सीट की जानकारी</h4>
-                                <!-- <p>स्कूल</p> -->
-                            </div>
-                           
-                
-                            <div class="services-icon">
-                                <i class="fa fa-search  rs-animation-scale-up"></i>
-                            </div>
-                            <div class="services-desc">
-                                <h4 class="services-title">मैपिंग रिपोर्ट</h4>
-
-                            </div>
-                        
-               
-                
-                            <div class="services-icon">
-                                <i class="fa fa-book rs-animation-scale-up"></i>
-                            </div>
-                            <div class="services-desc">
-                                <h4 class="services-title">यूजर मैनुअल</h4>
-
-                            </div>
-                       
-    <!-- Box menu End -->           
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
         <!-- Footer Start -->
 
         <footer class="page-footer font-small unique-color-dark text-center" id="footer">
-            <div style="background-color:#2d3030d1 ">
+            <div class="container">
+                <!-- Footer Address -->
+                <div class="container">
+                <!-- Footer Address -->
+                <div>
+                    <h4 >पता</h4>
+                                
+                 </div>
+                 <div>
+                     <h4>हेल्पलाइन नंबर</h4>
+
+                 </div>
+                <div>
+                    <h4>ईमेल आई.डी.</h4>
+
+                </div>
+            </div>
+          </div>
+            <div style="background-color:#2d3030d1">
                 <div class="container">
                     <div class="row py-4 d-flex align-items-center">
                         <!---Grid column--->
