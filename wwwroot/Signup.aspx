@@ -112,6 +112,7 @@
             <asp:TextBox ID="txtUserName" runat="server" placeholder="Username"></asp:TextBox>
             <label for="email"><b>Email</b></label>
             <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" ></asp:TextBox>
+
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail"
             ForeColor="Red" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
             Display = "Dynamic" ErrorMessage = "Invalid email address"/>

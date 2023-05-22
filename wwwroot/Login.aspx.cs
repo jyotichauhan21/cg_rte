@@ -23,7 +23,7 @@ public partial class wwwroot_Login : System.Web.UI.Page
             try {
 
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conDB"].ConnectionString);
-                SqlCommand cmd = new SqlCommand("usp_CheckLoginDetails", con);
+                SqlCommand cmd = new SqlCommand("usp_CheckLoginDetails1", con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
@@ -31,11 +31,33 @@ public partial class wwwroot_Login : System.Web.UI.Page
                 con.Open();
                 SqlDataReader read = cmd.ExecuteReader();
                 read.Read();
-                //if there are ROWS returned
+
+                //If there are rows returned
+
                 if (read.HasRows)
                 {
-                    Response.Write("<script>alert('Login Successfully!'); </script>");
-                    Response.Redirect("HomePage.aspx");
+                    if (read[0].ToString() == "2") {
+                        Response.Redirect("DPI/DPI_Dashboard.aspx");
+                    }
+                    else if (read[0].ToString() == "3")
+                    {
+                        Response.Redirect("DEO/DEO_Dashboard.aspx");
+
+                    }
+                    else if (read[0].ToString() == "1")
+                    {
+                        Response.Redirect("Nodal/Nodal_Dashboard.aspx");
+
+                    }
+                    else if (read[0].ToString() == "4")
+                    {
+                        Response.Redirect("School/School_Dashboard.aspx");
+
+                    }
+                    else {
+                        Response.Redirect("HomePage.aspx");
+
+                    }
                 }
                 else
                 {
