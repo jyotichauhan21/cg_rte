@@ -33,11 +33,12 @@ public partial class wwwroot_Login : System.Web.UI.Page
                 read.Read();
 
                 //If there are rows returned
-
                 if (read.HasRows)
                 {
                     if (read[0].ToString() == "2") {
+
                         Response.Redirect("DPI/DPI_Dashboard.aspx");
+
                     }
                     else if (read[0].ToString() == "3")
                     {

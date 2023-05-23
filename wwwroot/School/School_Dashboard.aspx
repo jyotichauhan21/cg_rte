@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/wwwroot/Admin/Master.master" AutoEventWireup="true" CodeFile="School_Dashboard.aspx.cs" Inherits="wwwroot_School_School_Dashboard" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/wwwroot/Admin/SchoolMaster.master" AutoEventWireup="true" CodeFile="School_Dashboard.aspx.cs" Inherits="wwwroot_School_School_Dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

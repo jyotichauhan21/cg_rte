@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/wwwroot/Admin/Master.master" AutoEventWireup="true" CodeFile="DPI_Dashboard.aspx.cs" Inherits="wwwroot_DPI_DPI_Dashboard" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/wwwroot/Admin/DPIMaster.master" AutoEventWireup="true" CodeFile="DPI_Dashboard.aspx.cs" Inherits="wwwroot_DPI_DPI_Dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
