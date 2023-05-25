@@ -6,16 +6,16 @@
 <head runat="server">
     <title>SignUp</title>
     <style>
-         #footer{
-    position: absolute;
-    bottom: 0px;
-    height: 3px;
-    background-color: #666;
-    color: #eee;
-}
+        #footer {
+            position: absolute;
+            bottom: 0px;
+            height: 3px;
+            background-color: #666;
+            color: #eee;
+        }
     </style>
     <link href="CSS/SignUpCSS.css" rel="stylesheet" />
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
 
     <script language="javascript" type="text/ecmascript">
         function ValidateForm() {
@@ -81,95 +81,94 @@
     <form id="form1" runat="server">
 
         <!--- This is header section--->
-        <header style="background-color: #2d3030d1";>
+        <header style="background-color: #2d3030d1">
             <div class="rs-header-top headertop headerbackground">
-                    <div class="container containertop">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-12" style="display: -webkit-inline-box;">
-                                <div class=" text-center imagelogo headertop">
-                                    
-                                       <img src="images/cglogo.png" alt="logo" width="100px" height="100px" />
-                                </div>
-                                  <div style="color:white">
+                <div class="container containertop">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12" style="display: -webkit-inline-box;">
+                            <div class=" text-center imagelogo headertop">
 
-                                    <p class="h1Heading">स्कूल शिक्षा विभाग</p>
-                                    <p class="h2Heading">शिक्षा का अधिकार (RTE) पोर्टल</p>
-                                    <p class="h2Heading">छत्तीसगढ़ शासन</p>
-                                </div>
+                                <img src="images/cglogo.png" alt="logo" width="100px" height="100px" />
                             </div>
+                            <div style="color: white">
+
+                                <p class="h1Heading">स्कूल शिक्षा विभाग</p>
+                                <p class="h2Heading">शिक्षा का अधिकार (RTE) पोर्टल</p>
+                                <p class="h2Heading">छत्तीसगढ़ शासन</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-         </div>
         </header>
         <!--- This is end header section--->
 
 
-     <div style="width:700px; margin-left:350px; margin-top:50px;">
-            <h2 style="text-align:center; background-color:lightgreen; padding:10px;">SignUp Form</h2>
+        <div style="width: 700px; margin-left: 350px; margin-top: 50px;">
+            <h2 style="text-align: center; background-color: lightgreen; padding: 10px;">SignUp Form</h2>
         </div>
-        <div class="container" style="width:700px; margin-left:350px; margin-top:50px;">
+        <div class="container" style="width: 700px; margin-left: 350px; margin-top: 50px;">
             <label for="uname"><b>UserName</b></label>
             <asp:TextBox ID="txtUserName" runat="server" placeholder="Username"></asp:TextBox>
             <label for="email"><b>Email</b></label>
-            <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" ></asp:TextBox>
+            <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
 
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail"
-            ForeColor="Red" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
-            Display = "Dynamic" ErrorMessage = "Invalid email address"/>
+                ForeColor="Red" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                Display="Dynamic" ErrorMessage="Invalid email address" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail"
-            ForeColor="Red" Display = "Dynamic" ErrorMessage = "Required" />
+                ForeColor="Red" Display="Dynamic" ErrorMessage="Required" />
 
             <label for="uid"><b>Password</b></label>
             <asp:TextBox ID="txtPassword1" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
             <label for="uid"><b>Confirm Password</b></label>
             <asp:TextBox ID="txtPassword2" runat="server" placeholder="Confirm Password" TextMode="Password"></asp:TextBox>
-<%--            <asp:Label ID="Label1" runat="server" Text="Role"></asp:Label>--%>
+            <%--            <asp:Label ID="Label1" runat="server" Text="Role"></asp:Label>--%>
             <label for="uid"><b>Role</b></label>
             <div>
                 <asp:DropDownList ID="DropDownList1" runat="server" Width="700px" Height="40px">
-                 
                 </asp:DropDownList>
 
- 
+
             </div>
 
             <asp:Button ID="Button1" runat="server" Text="साइन अप करें" CssClass="buttoncustom button button-default-size" type="submit" Font-Size="Larger" OnClick="Button1_Click" OnClientClick=" return ValidateForm();" />
 
         </div>
-       
+
         <br />
 
-       <!-- Footer Start -->
+        <!-- Footer Start -->
 
         <footer class="page-footer font-small unique-color-dark text-center" id="footer">
             <div class="container">
                 <!-- Footer Address -->
                 <div class="container">
-                <!-- Footer Address -->
-                <div>
-                    <h4 >पता</h4>
-                                
-                 </div>
-                 <div>
-                     <h4>हेल्पलाइन नंबर</h4>
+                    <!-- Footer Address -->
+                    <div>
+                        <h4>पता</h4>
 
-                 </div>
-                <div>
-                    <h4>ईमेल आई.डी.</h4>
+                    </div>
+                    <div>
+                        <h4>हेल्पलाइन नंबर</h4>
 
+                    </div>
+                    <div>
+                        <h4>ईमेल आई.डी.</h4>
+
+                    </div>
                 </div>
             </div>
-          </div>
-            <div style="background-color:#2d3030d1">
+            <div style="background-color: #2d3030d1">
                 <div class="container">
                     <div class="row py-4 d-flex align-items-center">
                         <!---Grid column--->
                         <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                            <h6 class="mb-0" style="color:white;">Get connected with us on social media network!
+                            <h6 class="mb-0" style="color: white;">Get connected with us on social media network!
 
                             </h6>
                         </div>
-                       <!---Grid column--->
+                        <!---Grid column--->
                         <div class="flex-center">
                             <%-- Facebook --%>
                             <a class="fb-ic">
@@ -193,19 +192,19 @@
                             </a>
                         </div>
                         <%-- copyright --%>
-            <div class="footer-copyright text-center py-3">
-                 Copyright &copy; &nbsp;2020&nbsp;-&nbsp;21&nbsp; CG School Education Department | Government of Chhattisgarh RTE. All Rights Reserved.Powerd by: NIC.
+                        <div class="footer-copyright text-center py-3">
+                            Copyright &copy; &nbsp;2020&nbsp;-&nbsp;21&nbsp; CG School Education Department | Government of Chhattisgarh RTE. All Rights Reserved.Powerd by: NIC.
                 All efforts have been made to make the information as accurate as possible. Department of School Education, Govt. of Chhattisgarh or NIC will not be responsible for any damage caused by inaccuracy in the information available on this website. 
                 Designed, developed & hosted by National Informatics Center(NIC), Chhattsgarh State Centre, Raipur and Contents are owned by School Education Department, Govt. of Chhattisgarh.
                 Please contact the Web Team with your queries, comments, and suggestions about this website on <a href="http://eduportal.cg.nic.in/rte" target="_blank">eduportal.cg.nic.in/rte</a>.
-            </div>
-            <%-- end copyright --%>
+                        </div>
+                        <%-- end copyright --%>
                     </div>
                 </div>
             </div>
 
         </footer>
-       <!-- Footer ends -->
+        <!-- Footer ends -->
 
     </form>
 </body>

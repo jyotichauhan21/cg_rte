@@ -5,77 +5,94 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <style>
-         #footer{
-    position: absolute;
-    bottom: 0px;
-    height: 3px;
-    background-color: #666;
-    color: #eee;
-}
+        <link href="../CSS/Index.css" rel="stylesheet" />
+    <style>
+        #footer {
+            position: absolute;
+            bottom: 0px;
+            height: 3px;
+            background-color: #666;
+            color: #eee;
+        }
     </style>
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-   <div>
-         <!--- This is header section--->
-        <header style="background-color: #2d3030d1";>
-            <div class="rs-header-top headertop headerbackground">
+        <div>
+            <!--- This is header section--->
+            <header style="background-color: #2d3030d1">
+                <div class="rs-header-top headertop headerbackground">
                     <div class="container containertop">
                         <div class="row">
                             <div class="col-lg-6 col-md-12 col-sm-12 col-12" style="display: -webkit-inline-box;">
                                 <div class=" text-center imagelogo headertop">
-                                    
-                                       <img src="../images/cglogo.png" alt="logo" width="100px" height="100px" />
+
+                                    <img src="../images/cglogo.png" alt="logo" width="100px" height="100px" />
                                 </div>
-                                <div style="color:white">
+                                <div style="color: white">
                                     <p class="h1Heading">स्कूल शिक्षा विभाग</p>
                                     <p class="h2Heading">शिक्षा का अधिकार (RTE) पोर्टल</p>
                                     <p class="h2Heading">छत्तीसगढ़ शासन</p>
                                 </div>
                             </div>
-            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--- This is end header section--->
+
+             <nav>
+                <label class="toggle" for="drop">Menu</label>
+                <input type="checkbox" id="drop" />
+                <ul class="menu">
+                    <li><a href="index.aspx">होम</a></li>
+                    <li><a href="#">भर्ती संबंधित कार्य</a></li>
+                    <li><a href="#">वर्तमान कार्य</a></li>
+                    <li><a href="#">लॉटरी प्रक्रिया</a></li>
+                    <li><a href="#">रिपोर्ट</a></li>
+                    <li><a href="../User_Manual/User_Manual_Nodal.pdf">यूजरमेनुअल/अधिसुचना</a></li>
+                    <li><a href="../Login.aspx"">लॉग आउट</a></li>
+
+
+                </ul>
+            </nav>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
         </div>
-         </div>
-        </header>
-        <!--- This is end header section--->
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
         <!-- Footer Start -->
 
         <footer class="page-footer font-small unique-color-dark text-center" id="footer">
             <div class="container">
                 <!-- Footer Address -->
                 <div class="container">
-                <!-- Footer Address -->
-                <div>
-                    <h4 >पता</h4>
-                                
-                 </div>
-                 <div>
-                     <h4>हेल्पलाइन नंबर</h4>
+                    <!-- Footer Address -->
+                    <div>
+                        <h4>पता</h4>
 
-                 </div>
-                <div>
-                    <h4>ईमेल आई.डी.</h4>
+                    </div>
+                    <div>
+                        <h4>हेल्पलाइन नंबर</h4>
 
+                    </div>
+                    <div>
+                        <h4>ईमेल आई.डी.</h4>
+
+                    </div>
                 </div>
             </div>
-          </div>
-            <div style="background-color:#2d3030d1">
+            <div style="background-color: #2d3030d1">
                 <div class="container">
                     <div class="row py-4 d-flex align-items-center">
                         <!---Grid column--->
                         <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                            <h6 class="mb-0" style="color:white;">Get connected with us on social media network!
+                            <h6 class="mb-0" style="color: white;">Get connected with us on social media network!
 
                             </h6>
                         </div>
-                       <!---Grid column--->
+                        <!---Grid column--->
                         <div class="flex-center">
                             <%-- Facebook --%>
                             <a class="fb-ic">
@@ -99,19 +116,19 @@
                             </a>
                         </div>
                         <%-- copyright --%>
-            <div class="footer-copyright text-center py-3">
-                 Copyright &copy; &nbsp;2020&nbsp;-&nbsp;21&nbsp; CG School Education Department | Government of Chhattisgarh RTE. All Rights Reserved.Powerd by: NIC.
+                        <div class="footer-copyright text-center py-3">
+                            Copyright &copy; &nbsp;2020&nbsp;-&nbsp;21&nbsp; CG School Education Department | Government of Chhattisgarh RTE. All Rights Reserved.Powerd by: NIC.
                 All efforts have been made to make the information as accurate as possible. Department of School Education, Govt. of Chhattisgarh or NIC will not be responsible for any damage caused by inaccuracy in the information available on this website. 
                 Designed, developed & hosted by National Informatics Center(NIC), Chhattsgarh State Centre, Raipur and Contents are owned by School Education Department, Govt. of Chhattisgarh.
                 Please contact the Web Team with your queries, comments, and suggestions about this website on <a href="http://eduportal.cg.nic.in/rte" target="_blank">eduportal.cg.nic.in/rte</a>.
-            </div>
-            <%-- end copyright --%>
+                        </div>
+                        <%-- end copyright --%>
                     </div>
                 </div>
             </div>
 
         </footer>
-       <!-- Footer ends -->
+        <!-- Footer ends -->
     </form>
 </body>
 </html>
